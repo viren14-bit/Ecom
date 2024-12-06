@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>ShoeHaven - About Us</title>
+  <style media="screen">
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .about-us-container {
+      text-align: center;
+      margin: 40px;
+    }
+
+    .about-us-container h1 {
+      font-size: 36px;
+      color: #333;
+    }
+
+    .about-us-container p {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: justify;
+    }
+
+    .about-us-container img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .footer-content {
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body style="background-color:#f7f7f7;">
+  {% if request.user.is_authenticated %}
+    {% include "ecom/customer_navbar.html" %}
+  {% else %}
+    {% include "ecom/navbar.html" %}
+  {% endif %}
+
+  <div class="about-us-container">
+    <h1>Welcome to ShoeHaven!</h1>
+    <p>
+      At ShoeHaven, we believe that the right pair of shoes can make all the difference in your day. Whether you're looking for the perfect sneakers, elegant heels, or cozy boots, we have something to suit every style and occasion. Our mission is simple: to provide you with high-quality, comfortable, and stylish footwear at affordable prices.
+    </p>
+    <p>
+      Founded in 2020, ShoeHaven began as a small local shoe shop, passionate about offering customers top-notch shoes with a focus on quality and style. Over the years, we've grown into a trusted online destination for all things footwear. We work with leading brands and designers to bring you the latest trends and timeless classics that will keep you on your feet and looking great.
+    </p>
+    <p>
+      Our commitment to customer satisfaction is what sets us apart. We offer free shipping, hassle-free returns, and an easy-to-use website that makes shopping for shoes an enjoyable experience. Whether you're browsing for a new pair for work, play, or a special occasion, ShoeHaven is your go-to destination for footwear.
+    </p>
+    <p>
+      Join our ever-growing community of shoe enthusiasts and discover why ShoeHaven is the place to be for all your shoe needs. We are more than just a store—we are a haven for shoes, offering a wide selection of styles, sizes, and colors to ensure that every customer finds the perfect fit. From casual to formal, sporty to chic, ShoeHaven has you covered.
+    </p>
+
+    <img src="{% static 'images/shoehaven-about.jpg' %}" alt="ShoeHaven Store" />
+
+    <p>
+      Thank you for choosing ShoeHaven, where every step is a step towards style, comfort, and satisfaction.
+    </p>
+  </div>
+
+  {% include "ecom/footer.html" %}
+
+</body>
+
+
+</html>
